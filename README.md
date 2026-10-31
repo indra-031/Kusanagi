@@ -1,4 +1,3 @@
-<div align="center">
 ```
  █████   ████                                                             ███ 
 ░░███   ███░                                                             ░░░  
@@ -12,6 +11,7 @@
                                                                ░░██████       
                                                                 ░░░░░░       
 ```
+<div align="center">
                 401 / 403 Bypass Testing Tool
 
 *Named after the legendary Japanese sword — Kusanagi no Tsurugi*
