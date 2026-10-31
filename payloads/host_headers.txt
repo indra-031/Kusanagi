@@ -1,0 +1,71 @@
+# ================================================================
+# Host header variations
+# The special token __NONE__ means: omit the Host header
+# ================================================================
+
+# --- Omit Host entirely ---
+__NONE__
+
+# --- Localhost family ---
+Host: localhost
+Host: localhost.localdomain
+Host: localhost:80
+Host: localhost:443
+Host: localhost:5000
+Host: localhost:8000
+Host: localhost:8080
+Host: localhost:8443
+Host: LOCALHOST
+Host: Localhost
+Host: LOCALHOST:5000
+
+# --- 127.0.0.1 family ---
+Host: 127.0.0.1
+Host: 127.0.0.1:80
+Host: 127.0.0.1:443
+Host: 127.0.0.1:5000
+Host: 127.0.0.1:8000
+Host: 127.0.0.1:8080
+Host: 127.0.0.1:8443
+
+# --- IPv6 ---
+Host: [::1]
+Host: [::1]:5000
+Host: [::1]:80
+Host: [::1]:443
+
+# --- Wildcard / any ---
+Host: 0.0.0.0
+Host: 0.0.0.0:5000
+Host: 0.0.0.0:80
+Host: 0.0.0.0:443
+
+# --- Internal names ---
+Host: internal
+Host: internal.local
+Host: intranet
+Host: admin
+Host: admin.local
+Host: test
+Host: dev
+Host: staging
+
+# --- Cloud metadata IPs ---
+Host: 169.254.169.254
+Host: metadata.google.internal
+Host: 100.100.100.200
+
+# --- IP alternative representations (from bypasser.py) ---
+Host: 2130706433
+Host: 0x7F000001
+Host: 0177.0000.0000.0001
+Host: 0
+Host: 127.1
+
+# --- Private ranges ---
+Host: 10.0.0.0
+Host: 10.0.0.1
+Host: 172.16.0.0
+Host: 172.16.0.1
+Host: 192.168.1.0
+Host: 192.168.1.1

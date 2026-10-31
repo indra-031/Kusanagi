@@ -1,0 +1,8 @@
+{
+  "telegram": {
+    "enabled": true,
+    "bot_token": "BOT_TOKEN",
+    "chat_id": "CHAT_ID",
+    "thread_id": ""
+  }
+}

